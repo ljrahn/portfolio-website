@@ -10,40 +10,66 @@ const Hero = () => {
   return (
     <MoveFade>
       <div id="hero" />
-      <Box sx={{ position: "relative" }}>
+      <Box
+        sx={{
+          position: "relative",
+          backgroundColor: "black",
+        }}
+      >
         <Box
           sx={{
             backgroundAttachment: "fixed",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            opacity: "0.5",
+            opacity: "0.4",
             height: "100vh",
             width: "100%",
             backgroundPosition: { md: "center", xs: "calc(40vw - 400px)" },
-            backgroundImage: `url(${window.location.origin}/img/LucasHero.jpeg)`,
+            backgroundImage: `url(/img/LucasHero.jpeg)`,
           }}
         />
         <Box
           sx={{
-            maxWidth: "1152px",
             position: "absolute",
             top: "22rem",
             left: "50%",
             transform: "translate(-50%, -50%)",
+            width: "70%",
           }}
-          textAlign="center"
+          textAlign="left"
         >
           <MoveFade y={"300"} delay={300}>
-            <Typography sx={{ fontFamily: "fantasy" }} variant="h1">
+            <Typography
+              sx={{
+                fontWeight: "700",
+                color: "white",
+                fontFamily: "Rubik",
+              }}
+              variant="h1"
+            >
               Lucas Rahn
             </Typography>
           </MoveFade>
           <MoveFade y={"300"} delay={500}>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              velit minima blanditiis aperiam suscipit laudantium minus
-              consectetur iure suscipit laudantium minus consectetur iure
-              suscipit laudantium minus consectetur iure
+            <Typography
+              sx={{
+                fontWeight: "800",
+                color: "grey.500",
+                fontFamily: "Rubik",
+              }}
+              variant="h3"
+            >
+              The Web is my Playground
+            </Typography>
+          </MoveFade>
+          <MoveFade y={"300"} delay={700}>
+            <Typography
+              variant="body1"
+              sx={{ fontWeight: "1000", color: "white", mt: 3 }}
+            >
+              I am a fourth year Electrical Engineering student from UOttawa. I
+              love learning about and working with software technologies that
+              will change our future.
             </Typography>
           </MoveFade>
         </Box>

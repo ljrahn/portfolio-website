@@ -1,6 +1,7 @@
 import { Box, Grid, ListItem, Typography } from "@mui/material";
 import React from "react";
 import MoveFade from "../../Animation/MoveFade";
+import Header from "../Header/Header";
 import ProjectsItem from "./ProjectsItem";
 import ProjectsItemSmall from "./ProjectsItemSmall";
 
@@ -21,18 +22,14 @@ const projects = [
   },
 ];
 
-const ProjectsBar = () => {
+const ProjectsBar = ({ headerIndex }) => {
   return (
     <>
-      <MoveFade y={"150px"} triggerMargin={"100px"}>
-        <Typography id="projects" variant="h3" textAlign="center" mb={3}>
-          Projects
-        </Typography>
-      </MoveFade>
+      <Header index={headerIndex} title="Projects" />
 
       {projects.map((project, index) => (
         <Box key={index}>
-          <Box sx={{ display: { md: "block", xs: "none" } }}>
+          <Box sx={{ display: { md: "block", xs: "none" } }} mb={10}>
             <ProjectsItem data={project} index={index} />
           </Box>
           <Box sx={{ display: { md: "none", xs: "block" } }}>

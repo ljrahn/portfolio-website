@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { useIntersectionObserver } from "../../hooks";
 import { useSpring, animated, config } from "react-spring";
 import MoveFade from "../../Animation/MoveFade";
+import Header from "../Header/Header";
 
 const imgs = [
   {
@@ -38,14 +39,10 @@ const imgs = [
   },
 ];
 
-const SkillsBar = () => {
+const SkillsBar = ({ headerIndex }) => {
   return (
     <>
-      <MoveFade y={"150px"} triggerMargin={"100px"}>
-        <Typography id="skills" mb={2} textAlign="center" variant="h3">
-          Languages and Tools I Use Most
-        </Typography>
-      </MoveFade>
+      <Header index={headerIndex} title="My Languages and Tools" />
 
       <MoveFade y={"150px"} triggerMargin={"100px"}>
         <Grid container spacing={3} justifyContent="center">

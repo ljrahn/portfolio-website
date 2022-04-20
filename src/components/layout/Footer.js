@@ -109,19 +109,16 @@ const Footer = () => {
                   </Typography>
                 </Box>
                 <Box sx={{ width: { xs: "50%", sm: "100%" }, margin: "auto" }}>
-                  <Box>
-                    <ResumeButton
-                      variant="contained"
-                      color="secondary"
-                      sx={{
-                        marginTop: "15px",
-                        height: 40,
-                        width: "100%",
-                      }}
-                    >
-                      View Resume
-                    </ResumeButton>
-                  </Box>
+                  <ResumeButton
+                    variant="contained"
+                    sx={{
+                      marginTop: "15px",
+                      height: 40,
+                      width: "100%",
+                    }}
+                  >
+                    View Resume
+                  </ResumeButton>
                 </Box>
 
                 <Box

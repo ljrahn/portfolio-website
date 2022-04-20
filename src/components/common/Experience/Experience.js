@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import { ArrowRight } from "@mui/icons-material";
 import { Divider, useMediaQuery } from "@mui/material";
 import MoveFade from "../../Animation/MoveFade";
-import HexagonIcon from "@mui/icons-material/Hexagon";
+import Header from "../Header/Header";
 
 const experienceItems = [
   {
@@ -47,7 +47,7 @@ const TabPanel = (props) => {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 3, pt: { xs: 3, md: 0 } }}>
           <Typography component={"span"}>{children}</Typography>
         </Box>
       )}
@@ -68,7 +68,7 @@ const a11yProps = (index) => {
   };
 };
 
-const Experience = () => {
+const Experience = ({ headerIndex }) => {
   const [value, setValue] = useState(0);
   const smScreenWidth = useMediaQuery("(max-width:900px)");
 
@@ -78,42 +78,7 @@ const Experience = () => {
 
   return (
     <>
-      <MoveFade y={"150px"} triggerMargin={"100px"}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <HexagonIcon
-            sx={{
-              color: "primary.main",
-              fontSize: 17,
-              transform: "rotate(90deg)",
-            }}
-          />
-          <Divider
-            sx={{
-              borderColor: "primary.main",
-              borderWidth: "1px",
-              opacity: "0.5",
-              width: 200,
-            }}
-          />
-          <Typography
-            id="experience"
-            sx={{ color: "primary.light" }}
-            textAlign="right"
-            mb={1}
-            ml={1}
-            variant="h4"
-          >
-            Relevant Experience
-          </Typography>
-        </Box>
-      </MoveFade>
-
+      <Header index={headerIndex} title="Relevant Experience" />
       <MoveFade y={"150px"} triggerMargin={"100px"}>
         <Box
           sx={{

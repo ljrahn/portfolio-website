@@ -35,11 +35,11 @@ const ProjectsItem = ({ data, index }) => {
             sx={{
               padding: "20px",
               marginBottom: "10px",
-              backgroundColor: "primary.light",
+              backgroundColor: "grey.300",
               opacity: 0.9,
             }}
           >
-            <Typography variant="body1" fontSize="0.9rem">
+            <Typography variant="body1" fontSize="0.9rem" color="black">
               {data.description}
             </Typography>
           </Paper>
@@ -64,7 +64,7 @@ const ProjectsItem = ({ data, index }) => {
             <Button
               sx={{ mr: 1 }}
               variant="contained"
-              color="secondary"
+              color="primary"
               endIcon={<DemoIcon />}
             >
               Demo

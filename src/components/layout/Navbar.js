@@ -129,7 +129,7 @@ const Navbar = () => {
           </Box>
 
           {/* Large Screen in line navbar items */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, ml: 2 }}>
             {pages.map((page, index) => (
               <MoveFade
                 y={"-100px"}
@@ -148,11 +148,10 @@ const Navbar = () => {
                   offset={-68}
                 >
                   <Typography
-                    m={1}
+                    m={2}
                     variant="body1"
                     color="text.primary"
                     fontWeight="bold"
-                    fontSize={"0.9rem"}
                     sx={{
                       "&:hover": { cursor: "pointer" },
                       "&::after": {
