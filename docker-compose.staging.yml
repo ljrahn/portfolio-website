@@ -2,6 +2,7 @@ version: "3.3"
 
 services:
   portfolio:
-    build: .
+    build:
+      dockerfile: Dockerfile.staging
     ports:
       - "80:80"
