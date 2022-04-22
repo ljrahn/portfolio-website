@@ -7,24 +7,29 @@ import ProjectsItemSmall from "./ProjectsItemSmall";
 
 const projects = [
   {
-    src: "/img/projects/eth-marketplace-img.png",
-    name: "Ethereum Marketplace",
+    src: "/img/projects/digimarkets-cover.png",
+    name: "Digimarkets",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consectetur voluptatibus consequatur nisi autem mollitia voluptatem, minus architecto, fugiat eos quisquam accusamus, velit unde corporis optio assumenda",
-    skills: ["React", "SWR", "Solidity", "ERC721"],
+      "An application that allows users browse NFT contracts and their tokens. After connecting a metamask wallet, you have full access to view your NFT's, your NFT transaction history, and any NFT contract, for multiple EVM compatible chains.",
+    skills: ["Flask", "NextJS", "SWR", "Metamask", "TailwindCSS"],
+    demo: "https://digimarkets.lujr.ca",
+    code: "https://github.com/lucasrahn09/digi-markets",
   },
   {
-    src: "/img/projects/ecommerce-buisness-tools.png",
-    name: "Ecommerce Buisness Tools",
+    src: "/img/projects/portfolio-project.png",
+    name: "Portfolio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consectetur voluptatibus consequatur nisi autem mollitia voluptatem, minus architecto, fugiat eos quisquam accusamus, velit unde corporis optio assumenda",
-    skills: ["Python", "Flask", "etc."],
+      "My portfolio which outlines my skills and experience developing software.",
+    skills: ["React", "Material-UI"],
+    demo: "https://lujr.ca",
+    code: "https://github.com/lucasrahn09/portfolio-website",
   },
 ];
 
 const ProjectsBar = ({ headerIndex }) => {
   return (
     <>
+      <div id="projects" />
       <Header index={headerIndex} title="Projects" />
 
       {projects.map((project, index) => (

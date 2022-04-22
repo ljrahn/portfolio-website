@@ -7,6 +7,8 @@ import ContactForm from "./ContactForm";
 const Contact = ({ headerIndex }) => {
   return (
     <>
+      <div id="contact" />
+
       <MoveFade y={"150px"} triggerMargin={"100px"}>
         <Header index={headerIndex} title="Get in Touch" />
       </MoveFade>

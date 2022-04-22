@@ -13,8 +13,8 @@ const pages = [
     idRef: "about",
   },
   {
-    name: "Skills",
-    idRef: "skills",
+    name: "Experience",
+    idRef: "experience",
   },
   {
     name: "Projects",
@@ -49,10 +49,11 @@ const Footer = () => {
                 </Box>
                 <Box>
                   <Typography>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
-                    ea odio facilis voluptate eius sunt nihil, nemo, eligendi
-                    doloribus mollitia ipsa nisi fugit, labore impedit
-                    praesentium. Perspiciatis deleniti modi porro.
+                    I am a fourth year student engineer currently looking coop
+                    work in the industry. I am very passionate about working
+                    with experienced engineers in software, so that we can learn
+                    from each other, and build elegant solutions for your
+                    company.
                   </Typography>
                 </Box>
               </Box>

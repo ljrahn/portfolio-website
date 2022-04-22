@@ -37,13 +37,7 @@ const Header = ({ index, title }) => {
             width: { md: 300, xs: 100 },
           }}
         />
-        <Typography
-          id="experience"
-          color="primary"
-          textAlign="right"
-          mb={1}
-          variant="h3"
-        >
+        <Typography color="primary" textAlign="right" mb={1} variant="h3">
           {title}
         </Typography>
       </Box>

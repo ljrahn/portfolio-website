@@ -1,8 +1,9 @@
-import { Typography, useTheme } from "@mui/material";
+import { Typography, useTheme, Button } from "@mui/material";
 import React from "react";
 import { Box } from "@mui/system";
 import MoveFade from "../../Animation/MoveFade";
 import { config, easings } from "react-spring";
+import { Link as ScrollLink } from "react-scroll";
 
 const Hero = () => {
   const theme = useTheme();
@@ -24,7 +25,8 @@ const Hero = () => {
             opacity: "0.4",
             height: "100vh",
             width: "100%",
-            backgroundPosition: { md: "center", xs: "calc(40vw - 400px)" },
+            backgroundPosition: { md: "center", xs: "calc(40vw - 500px)" },
+            // backgroundImage: `url(/img/LucasHero2.jpg)`,
             backgroundImage: `url(/img/LucasHero.jpeg)`,
           }}
         />
@@ -51,7 +53,7 @@ const Hero = () => {
             </Typography>
           </MoveFade>
           <MoveFade y={"300"} delay={500}>
-            <Typography
+            {/* <Typography
               sx={{
                 fontWeight: "800",
                 color: "grey.500",
@@ -60,17 +62,26 @@ const Hero = () => {
               variant="h3"
             >
               The Web is my Playground
-            </Typography>
+            </Typography> */}
           </MoveFade>
           <MoveFade y={"300"} delay={700}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "1000", color: "white", mt: 3 }}
             >
-              I am a fourth year Electrical Engineering student from UOttawa. I
-              love learning about and working with software technologies that
-              will change our future.
+              I love solving real world problems, learning about new technology,
+              and building software that people can use to satisfy their
+              business requirements. I am currently looking for a co-op position
+              in the industry, where I can utilise my skills, so that I can
+              learn new things, and make your company successful.
             </Typography>
+          </MoveFade>
+          <MoveFade y={"300"} delay={700}>
+            <ScrollLink to="contact" spy={true} smooth={true} offset={-68}>
+              <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+                Contact me
+              </Button>
+            </ScrollLink>
           </MoveFade>
         </Box>
       </Box>

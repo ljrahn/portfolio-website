@@ -16,13 +16,7 @@ import ThemeSwitch from "../common/Buttons/ThemeSwitch";
 import ResumeButton from "../common/Buttons/ResumeButton";
 import MoveFade from "../Animation/MoveFade";
 
-let resumeFile;
-
-if (process.env.NODE_ENV !== "production") {
-  resumeFile = process.env.REACT_APP_RESUME_LOCATION;
-} else {
-  resumeFile = process.env.REACT_APP_RESUME_LOCATION;
-}
+let resumeFile = process.env.REACT_APP_RESUME_LOCATION;
 
 const ANIMATION_SPEED_FACTOR = 10;
 
@@ -32,8 +26,8 @@ const pages = [
     idRef: "about",
   },
   {
-    name: "Skills",
-    idRef: "skills",
+    name: "Experience",
+    idRef: "experience",
   },
   {
     name: "Projects",

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Link, Paper, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import DemoIcon from "../Icons/DemoIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -54,22 +54,26 @@ const ProjectsItemSmall = ({ data }) => {
               ))}
             </Box>
             <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <Button
-                sx={{ mr: 1 }}
-                variant="contained"
-                color="secondary"
-                endIcon={<DemoIcon />}
-              >
-                Demo
-              </Button>
-              <Button
-                sx={{ ml: 1 }}
-                variant="contained"
-                color="primary"
-                endIcon={<GitHubIcon />}
-              >
-                View Code
-              </Button>
+              <Link href={data.demo} target="_blank">
+                <Button
+                  sx={{ mr: 1 }}
+                  variant="contained"
+                  color="primary"
+                  endIcon={<DemoIcon />}
+                >
+                  Demo
+                </Button>
+              </Link>
+              <Link href={data.code} target="_blank">
+                <Button
+                  sx={{ ml: 1 }}
+                  variant="contained"
+                  color="primary"
+                  endIcon={<GitHubIcon />}
+                >
+                  View Code
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>

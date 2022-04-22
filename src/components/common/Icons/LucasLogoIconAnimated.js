@@ -4,7 +4,7 @@ import "../../../styles/logoAnimation.css";
 import { useIntersectionObserver } from "../../hooks";
 import useWindowDimensions from "../../hooks/effects/useWindowDimensions";
 
-const LucasLogoIconAnimated2 = (props, { width, height }) => {
+const LucasLogoIconAnimated = (props, { width, height }) => {
   const triggerRef = useRef();
   const dataRef = useIntersectionObserver(triggerRef, {
     freezeOnceVisible: false,
@@ -55,7 +55,7 @@ const LucasLogoIconAnimated2 = (props, { width, height }) => {
             transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
             fill="#456aff"
             stroke="#456aff"
-            stroke-width="6"
+            strokeWidth="6"
           >
             <path
               d="M572 1726 l-413 -243 1 -484 c0 -368 3 -487 13 -495 27 -25 831 -474
@@ -76,7 +76,7 @@ c-60 -30 -89 -30 -119 1 -33 32 -32 52 8 222 13 53 13 65 1 88 -24 46 -26 44
 22 -17 24 -33 12 -19 -14 -55 -166 -56 -233 0 -36 -16 -44 -87 -44 -41 0 -43
 1 -43 30 0 17 9 71 20 122 26 116 27 148 5 181 -19 30 -16 33 45 40 84 9 90 8
 100 -19z"
-              class="svg-elem-1"
+              className="svg-elem-1"
             ></path>
           </g>
         </svg>
@@ -85,4 +85,4 @@ c-60 -30 -89 -30 -119 1 -33 32 -32 52 8 222 13 53 13 65 1 88 -24 46 -26 44
   );
 };
 
-export default LucasLogoIconAnimated2;
+export default LucasLogoIconAnimated;

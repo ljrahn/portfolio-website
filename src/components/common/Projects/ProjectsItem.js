@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Link, Paper, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import DemoIcon from "../Icons/DemoIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -39,9 +39,7 @@ const ProjectsItem = ({ data, index }) => {
               opacity: 0.9,
             }}
           >
-            <Typography variant="body1" fontSize="0.9rem" color="black">
-              {data.description}
-            </Typography>
+            <Typography color="black">{data.description}</Typography>
           </Paper>
           <Box my={2} sx={{ textAlign: evenItem ? "left" : "right" }}>
             {data.skills.map((skill, idx) => (
@@ -61,22 +59,26 @@ const ProjectsItem = ({ data, index }) => {
               justifyContent: evenItem ? "flex-start" : "flex-end",
             }}
           >
-            <Button
-              sx={{ mr: 1 }}
-              variant="contained"
-              color="primary"
-              endIcon={<DemoIcon />}
-            >
-              Demo
-            </Button>
-            <Button
-              sx={{ ml: 1 }}
-              variant="contained"
-              color="primary"
-              endIcon={<GitHubIcon />}
-            >
-              View Code
-            </Button>
+            <Link href={data.demo} target="_blank">
+              <Button
+                sx={{ mr: 1 }}
+                variant="contained"
+                color="primary"
+                endIcon={<DemoIcon />}
+              >
+                Demo
+              </Button>
+            </Link>
+            <Link href={data.code} target="_blank">
+              <Button
+                sx={{ ml: 1 }}
+                variant="contained"
+                color="primary"
+                endIcon={<GitHubIcon />}
+              >
+                View Code
+              </Button>
+            </Link>
           </Box>
         </Grid>
         <Box sx={{ gridArea: evenItem ? "1/6/1/-1" : "1/1/1/8" }} mx="auto">

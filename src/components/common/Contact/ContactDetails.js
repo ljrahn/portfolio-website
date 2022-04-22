@@ -86,7 +86,7 @@ const ContactDetails = () => {
             <Box
               sx={{
                 textAlign: "left",
-                width: { xs: "146px", sm: "182.5px" },
+                width: { xs: "178px", sm: "214.5px" },
               }}
             >
               <Typography variant="h5" color="grey.300">
@@ -94,7 +94,7 @@ const ContactDetails = () => {
               </Typography>
 
               <Typography variant="body" color="white">
-                (1)-519-535-8598
+                1-519-535-8598
               </Typography>
             </Box>
           </Box>

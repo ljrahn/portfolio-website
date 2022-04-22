@@ -7,8 +7,9 @@ import SkillsBar from "../common/Skills/SkillsBar";
 import Footer from "../layout/Footer";
 import Experience from "../common/Experience/Experience";
 import ProjectsBar from "../common/Projects/ProjectsBar";
+import About from "../common/About/About";
 
-const Components = [Experience, ProjectsBar, SkillsBar, Contact];
+const Components = [About, Experience, ProjectsBar, Contact];
 
 const Home = () => {
   // const github = useGithub();
@@ -19,12 +20,12 @@ const Home = () => {
     <div>
       <Hero />
       <Container>
-        <Box mt={20} />
+        <Box sx={{ mt: { xs: 5, md: 20 } }} />
 
         {Components.map((Component, index) => (
           <Box key={index}>
-            <Component headerIndex={index} />
-            <Box mt={40} />
+            <Component headerIndex={index + 1} />
+            <Box sx={{ mt: { xs: 10, md: 40 } }} />
           </Box>
         ))}
       </Container>
