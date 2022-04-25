@@ -71,9 +71,9 @@ const Hero = () => {
             >
               I love solving real world problems, learning about new technology,
               and building software that people can use to satisfy their
-              business requirements. I am currently looking for a co-op position
-              in the industry, where I can utilise my skills, so that I can
-              learn new things, and make your company successful.
+              business requirements. I am currently looking for a intern/co-op
+              position in the industry, where I can utilize my skills, so that I
+              can learn new things, and make your company successful.
             </Typography>
           </MoveFade>
           <MoveFade y={"300"} delay={700}>
