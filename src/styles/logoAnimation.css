@@ -4,9 +4,9 @@ svg .svg-elem-1 {
   fill: transparent;
   -webkit-transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715)
       0s,
-    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
   transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
-    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
 }
 
 svg.active .svg-elem-1 {

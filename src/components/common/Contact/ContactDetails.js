@@ -15,7 +15,7 @@ const ContactDetails = () => {
         p: 4,
         ml: { xs: 0, md: 1 },
         mt: { xs: 2, md: 0 },
-        backgroundColor: "#214c9c",
+        backgroundColor: "#214c9cbb",
         borderRadius: 3,
         position: "relative",
         textAlign: "center",
@@ -25,7 +25,7 @@ const ContactDetails = () => {
         sx={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          opacity: "0.2",
+          opacity: "0.3",
           height: "100%",
           width: "100%",
           position: "absolute",

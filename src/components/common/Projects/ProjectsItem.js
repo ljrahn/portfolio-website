@@ -21,64 +21,88 @@ const ProjectsItem = ({ data, index }) => {
           zIndex={1}
           sx={{ gridArea: evenItem ? "1/1/1/7" : "1/7/1/-1" }}
         >
-          <Box sx={{ textAlign: evenItem ? "left" : "right" }}>
-            <Typography variant="body1" color="secondary.main" my={1}>
-              Featured Project {index + 1}
-            </Typography>
-            <Typography variant="h5" color="primary.main" mb={2} mt={1}>
-              {data.name}
-            </Typography>
-          </Box>
-
-          <Paper
-            elevation={3}
-            sx={{
-              padding: "20px",
-              marginBottom: "10px",
-              backgroundColor: "grey.300",
-              opacity: 0.9,
-            }}
-          >
-            <Typography color="black">{data.description}</Typography>
-          </Paper>
-          <Box my={2} sx={{ textAlign: evenItem ? "left" : "right" }}>
-            {data.skills.map((skill, idx) => (
-              <Typography
-                key={idx}
-                p={1}
-                display="inline"
-                fontFamily="monospace"
-              >
-                {skill}
-              </Typography>
-            ))}
-          </Box>
           <Box
             sx={{
               display: "flex",
-              justifyContent: evenItem ? "flex-start" : "flex-end",
+              justifyContent: "center",
+              flexDirection: "column",
+              height: "100%",
             }}
           >
-            <Link href={data.demo} target="_blank">
-              <Button
-                sx={{ mr: 1 }}
-                variant="contained"
-                color="primary"
-                endIcon={<DemoIcon />}
-              >
-                Demo
-              </Button>
-            </Link>
-            <Link href={data.code} target="_blank">
-              <Button
-                sx={{ ml: 1 }}
-                variant="contained"
-                color="primary"
-                endIcon={<GitHubIcon />}
-              >
-                View Code
-              </Button>
-            </Link>
+            <Box sx={{ textAlign: evenItem ? "left" : "right" }}>
+              <Typography variant="body1" color="secondary.main" my={1}>
+                Featured Project {index + 1}
+              </Typography>
+              <Typography variant="h5" color="primary.main" mb={2} mt={1}>
+                {data.name}
+              </Typography>
+            </Box>
+
+            <Paper
+              elevation={3}
+              sx={{
+                padding: "20px",
+                marginBottom: "10px",
+                backgroundColor: "grey.300",
+                opacity: 0.9,
+              }}
+            >
+              <Typography color="black">{data.description}</Typography>
+            </Paper>
+            <Box
+              my={2}
+              sx={{
+                justifyContent: evenItem ? "flex-start" : "flex-end",
+                display: "flex",
+                flexWrap: "wrap",
+                width: "80%",
+                marginLeft: evenItem ? 0 : "auto",
+                marginRight: evenItem ? "auto" : 0,
+              }}
+            >
+              {data.skills.map((skill, idx) => (
+                <Typography
+                  key={idx}
+                  px={1}
+                  py={0.25}
+                  display="inline"
+                  fontFamily="monospace"
+                >
+                  {skill}
+                </Typography>
+              ))}
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: evenItem ? "flex-start" : "flex-end",
+              }}
+            >
+              {data.demo && (
+                <Link href={data.demo} target="_blank">
+                  <Button
+                    sx={{ mr: 1 }}
+                    variant="contained"
+                    color="primary"
+                    endIcon={<DemoIcon />}
+                  >
+                    Demo
+                  </Button>
+                </Link>
+              )}
+              {data.code && (
+                <Link href={data.code} target="_blank">
+                  <Button
+                    sx={{ ml: 1 }}
+                    variant="contained"
+                    color="primary"
+                    endIcon={<GitHubIcon />}
+                  >
+                    View Code
+                  </Button>
+                </Link>
+              )}
+            </Box>
           </Box>
         </Grid>
         <Box sx={{ gridArea: evenItem ? "1/6/1/-1" : "1/1/1/8" }} mx="auto">

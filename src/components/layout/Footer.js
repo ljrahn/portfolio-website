@@ -49,11 +49,11 @@ const Footer = () => {
                 </Box>
                 <Box>
                   <Typography>
-                    I am a fourth year student engineer currently looking coop
-                    work in the industry. I am very passionate about working
-                    with experienced engineers in software, so that we can learn
-                    from each other, and build elegant solutions for your
-                    company.
+                    I am an Electrical Engineering graduate currently looking
+                    full time work in the software industry. I am very
+                    passionate about working with experienced engineers, so that
+                    we can learn from each other, and build elegant software
+                    solutions for your organization.
                   </Typography>
                 </Box>
               </Box>

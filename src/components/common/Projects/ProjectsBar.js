@@ -7,22 +7,54 @@ import ProjectsItemSmall from "./ProjectsItemSmall";
 
 const projects = [
   {
+    src: "/img/projects/event-qr-cover.png",
+    name: "EventQR",
+    description:
+      "A QR code scanning application for uOttaHack 2023 which tracked food consumption, and raffle tickets for 500 hackers.",
+    skills: ["React Native", "Firebase Firestore", "Python"],
+    code: "https://github.com/ljrahn/event-qr",
+  },
+  {
+    src: "/img/projects/apollo-cover.png",
+    name: "Apollo Rehabilitation Glove",
+    description:
+      "A hand rehabilitation application, that presents users with activities to complete. Tracks hand motions in real time, presented on the screen, and scores users based on agility and dexterity.",
+    skills: [
+      "Arduino",
+      "NodeJS",
+      "ExpressJS",
+      "Mongoose/MongoDB",
+      "Python",
+      "Websockets",
+      "ThreeJS",
+    ],
+    code: "https://github.com/ljrahn/apollo-rehabilitation-glove",
+    demo: "https://www.youtube.com/watch?v=PwgL4q7kh08&t=2s&ab_channel=ljrahn",
+  },
+  {
+    src: "/img/projects/arber-cover.png",
+    name: "Arber",
+    description:
+      "A DAO that facilitates trustless donations, and holds fundraisers accountable to their mission statement by integrating Kleros for arbitrating disputes between fundraisers and donors. Note that this project is currently in progress.",
+    skills: [
+      "Solidity",
+      "React",
+      "Hardhat",
+      "Foundry",
+      "IPFS",
+      "TheGraph",
+      "Kleros",
+    ],
+    code: "https://github.com/arber-dao",
+  },
+  {
     src: "/img/projects/digimarkets-cover.png",
     name: "Digimarkets",
     description:
       "An application that allows users browse NFT contracts and their tokens. After connecting a metamask wallet, you have full access to view your NFT's, your NFT transaction history, and any NFT contract, for multiple EVM compatible chains.",
     skills: ["Flask", "NextJS", "SWR", "Metamask", "TailwindCSS"],
-    demo: "https://digimarkets.lujr.ca",
-    code: "https://github.com/lucasrahn09/digi-markets",
-  },
-  {
-    src: "/img/projects/portfolio-project.png",
-    name: "Portfolio",
-    description:
-      "My portfolio which outlines my skills and experience developing software.",
-    skills: ["React", "Material-UI"],
-    demo: "https://lujr.ca",
-    code: "https://github.com/lucasrahn09/portfolio-website",
+    demo: "https://digimarkets.ljrahn.ca",
+    code: "https://github.com/ljrahn/digi-markets",
   },
 ];
 

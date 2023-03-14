@@ -33,47 +33,44 @@ const ProjectsItemSmall = ({ data }) => {
             <Typography variant="body1" mb={2}>
               {data.description}
             </Typography>
-            <Box my={2}>
+            <Box my={2} sx={{ display: "flex", flexWrap: "wrap" }}>
               {data.skills.map((skill, idx) => (
                 <Box key={idx} display="inline">
-                  {idx === 0 ? (
-                    <Typography
-                      pr={1}
-                      py={1}
-                      display="inline"
-                      fontFamily="monospace"
-                    >
-                      {skill}
-                    </Typography>
-                  ) : (
-                    <Typography p={1} display="inline" fontFamily="monospace">
-                      {skill}
-                    </Typography>
-                  )}
+                  <Typography
+                    pr={2}
+                    py={1}
+                    display="inline"
+                    fontFamily="monospace"
+                  >
+                    {skill}
+                  </Typography>
                 </Box>
               ))}
             </Box>
             <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
-              <Link href={data.demo} target="_blank">
-                <Button
-                  sx={{ mr: 1 }}
-                  variant="contained"
-                  color="primary"
-                  endIcon={<DemoIcon />}
-                >
-                  Demo
-                </Button>
-              </Link>
-              <Link href={data.code} target="_blank">
-                <Button
-                  sx={{ ml: 1 }}
-                  variant="contained"
-                  color="primary"
-                  endIcon={<GitHubIcon />}
-                >
-                  View Code
-                </Button>
-              </Link>
+              {data.demo && (
+                <Link href={data.demo} target="_blank">
+                  <Button
+                    sx={{ mr: 2 }}
+                    variant="contained"
+                    color="primary"
+                    endIcon={<DemoIcon />}
+                  >
+                    Demo
+                  </Button>
+                </Link>
+              )}
+              {data.code && (
+                <Link href={data.code} target="_blank">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    endIcon={<GitHubIcon />}
+                  >
+                    View Code
+                  </Button>
+                </Link>
+              )}
             </Box>
           </Box>
         </Box>

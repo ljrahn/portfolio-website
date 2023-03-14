@@ -16,8 +16,6 @@ import ThemeSwitch from "../common/Buttons/ThemeSwitch";
 import ResumeButton from "../common/Buttons/ResumeButton";
 import MoveFade from "../Animation/MoveFade";
 
-let resumeFile = process.env.REACT_APP_RESUME_LOCATION;
-
 const ANIMATION_SPEED_FACTOR = 10;
 
 const pages = [

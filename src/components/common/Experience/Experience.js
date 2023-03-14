@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
+import { Link, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import { ArrowRight } from "@mui/icons-material";
 import { Collapse, Divider, IconButton, useMediaQuery } from "@mui/material";
@@ -33,19 +33,18 @@ const experienceItems = [
       },
       {
         children: (
-          <iframe
-            width="80%"
-            height="300px"
-            src="https://www.youtube.com/embed/U1X5tpjX95c"
-            title="YouTube video player"
-            frameborder="100"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen={true}
-            border
-          ></iframe>
+          <p style={{ margin: 0 }}>
+            Check out a{" "}
+            <Link
+              href="https://www.youtube.com/watch?v=U1X5tpjX95c&ab_channel=ljrahn"
+              target="_blank"
+              sx={{ textDecoration: "none" }}
+            >
+              demo video
+            </Link>{" "}
+            that was authorized by the employer.
+          </p>
         ),
-        collapsable: true,
-        title: "Demo Video",
       },
     ],
   },
@@ -73,6 +72,29 @@ const experienceItems = [
       {
         children:
           "Created bug reports using JIRA. Was in frequent communication with all development teams to resolve bugs promptly.",
+      },
+    ],
+  },
+  {
+    role: "Technician",
+    company: "Bell Technical Solutions",
+    location: "Ottawa, ON",
+    date: "May - September 2019, May - September 2020",
+    descriptionPoints: [
+      {
+        children:
+          "In charge of working on Copper and Fibre Optic communication infrastructure, repairing and installing residential internet, home phones, and FibeTV.",
+      },
+      {
+        children:
+          "Worked independently on troubleshooting telecommunications issues when reapiring internet, as well as assisted coworkers in the field upon request.",
+      },
+      {
+        children:
+          "Developed communications skills by interacting with many customers, managers, and co-workers on a daily basis.",
+      },
+      {
+        children: "Recognized and rewarded for having a low rework percentage",
       },
     ],
   },

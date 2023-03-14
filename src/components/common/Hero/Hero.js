@@ -53,27 +53,15 @@ const Hero = () => {
             </Typography>
           </MoveFade>
           <MoveFade y={"300"} delay={500}>
-            {/* <Typography
-              sx={{
-                fontWeight: "800",
-                color: "grey.500",
-                fontFamily: "Rubik",
-              }}
-              variant="h3"
-            >
-              The Web is my Playground
-            </Typography> */}
-          </MoveFade>
-          <MoveFade y={"300"} delay={700}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "1000", color: "white", mt: 3 }}
             >
               I love solving real world problems, learning about new technology,
               and building software that people can use to satisfy their
-              business requirements. I am currently looking for a intern/co-op
-              position in the industry, where I can utilize my skills, so that I
-              can learn new things, and make your company successful.
+              business requirements. I am currently looking for a full time
+              position in the industry, where I can utilize my skills to learn
+              new things, and make your company or DAO successful.
             </Typography>
           </MoveFade>
           <MoveFade y={"300"} delay={700}>

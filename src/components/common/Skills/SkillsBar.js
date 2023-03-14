@@ -10,22 +10,17 @@ const imgs = [
   {
     src: "/img/skills/python-logo-img.png",
     name: "Python",
-    description: `Python is the first language that I started developing applications with. Currently it is my go to language for anything running on the server`,
+    description: `Python was my first language, and the language which I am most comfortable with. I have written numerous Flask applications, and done a lot of testing with python.`,
   },
   {
     src: "/img/skills/javascript-logo-img.png",
-    name: "Javascript (ES6)",
-    description: `I picked up Javascript soon after Python, so I could develop web applications.`,
+    name: "Javascript/Typescript",
+    description: `I picked up JS/TS soon after Python, so I could develop web applications. In addition to frontend, it also gave me a new language to work on the server with, and also proved very useful for developing Hardhat applications.`,
   },
   {
     src: "/img/skills/react-logo-img.png",
     name: "React",
-    description: `Looking for a modern Javascript framework, all the rage lead to me React. This was a huge upgrade from vanilla Javascript and lead me to build much more powerful client side applications.`,
-  },
-  {
-    src: "/img/skills/flask-logo-img.png",
-    name: "Flask",
-    description: `Recently I have been developing most of my server side applications with Flask. I plan to branch out, and am eager to learn other web development frameworks.`,
+    description: `Looking for a modern frontend framework, all the rage lead to me React. This is currently my go to framework for client side applications, and I usually choose between CRA, NextJS, and Gatsby depending on the circumstances.`,
   },
   {
     src: "/img/skills/docker-logo-img.png",
@@ -35,7 +30,7 @@ const imgs = [
   {
     src: "/img/skills/eth-logo-img.png",
     name: "Ethereum",
-    description: `I have been very interested in the blockchain space lately. As such, I have been learning about the Bitcoin and Ethereum ecosystem, and have been writing small Solidity applications, using both Javascript and Python as clients.`,
+    description: `I have become very interested in the effect that Ethereum and other blockchains have had on DAO's and DEFI. I have developed applications in Solidity, and gotten familiar with tools such as Hardhat, Foundry, TheGraph, IPFS, Ethers.js, OpenZeppelin, Kleros, and Chainlink.`,
   },
 ];
 

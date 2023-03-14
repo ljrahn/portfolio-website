@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setTimerBoolean(true);
-    }, 3800);
+    }, 4500);
   }, []);
 
   useEffect(() => {

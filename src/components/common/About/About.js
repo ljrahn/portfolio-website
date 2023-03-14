@@ -5,10 +5,16 @@ import Header from "../Header/Header";
 import Carousel from "react-material-ui-carousel";
 import SkillsBar from "../Skills/SkillsBar";
 import MoveFade from "../../Animation/MoveFade";
+import { Link as ScrollLink } from "react-scroll";
+
+const resumeFile = process.env.REACT_APP_RESUME_LOCATION;
 
 const items = [
   {
     src: "/img/about/beach.jpeg",
+  },
+  {
+    src: "/img/about/montreal.jpeg",
   },
   {
     src: "/img/about/urubici-mountain.jpg",
@@ -75,15 +81,13 @@ const About = ({ headerIndex }) => {
         >
           <Box sx={{ width: { xs: "100%", md: "50%" }, flex: "none" }}>
             <Typography fontWeight={1000}>
-              Hello, my name is Lucas Rahn and I am a fourth year Electrical
-              Engineering student at the University of Ottawa. I have recently
-              been introduced into the world of building and designing software
-              solutions for people and companies, and have never been more
-              thrilled to tackle problems that will have a real effect on the
-              world.
+              Hello, my name is Lucas Rahn and I am a 2023 BASc Electrical
+              Engineering graduate from the University of Ottawa. Since early
+              2021, I have been building and designing software solutions for
+              people and companies.
             </Typography>
             <Typography fontWeight={1000} mt={2}>
-              Throughout the past couple years, I have worked at{" "}
+              I have worked at{" "}
               <Link
                 href="https://www.bellsolutionstech.ca/"
                 target="_blank"
@@ -100,8 +104,8 @@ const About = ({ headerIndex }) => {
               >
                 Netexperience
               </Link>
-              , a company innovating and changing the way we look at enterprise
-              WiFi, and{" "}
+              , a company innovating and laying the ground work for
+              disaggregated open WiFi, and{" "}
               <Link
                 href="https://cntautomation.com/"
                 target="_blank"
@@ -109,21 +113,53 @@ const About = ({ headerIndex }) => {
               >
                 CNTautomation
               </Link>
-              , a company that redistributes technical specialty equipment. In
+              , a company that redistributes specialty electrical equipment. In
               all of these roles, I have gained valuable experience in the world
               of telecommunications and networking, as well as software
               development experience in the latter two roles.
             </Typography>
             <Typography fontWeight={1000} mt={2}>
-              Recently I have been working on an open source{" "}
+              Although I do not have the same background as a Software Engineer,
+              I have taken an interest in my specialization of systems/control
+              engineering, which among other things, includes design of logic
+              gate circuits, and PIC programming. Additionally, I have worked on
+              numerous web development and blockchain projects that involve a
+              range of technologies. Below you will find a more detailed list of
+              my{" "}
+              <ScrollLink to="experience" spy={true} smooth={true} offset={-68}>
+                <Typography
+                  sx={{
+                    display: "inline",
+                    fontWeight: 1000,
+                    cursor: "pointer",
+                  }}
+                  color="primary"
+                >
+                  work experience
+                </Typography>
+              </ScrollLink>{" "}
+              and{" "}
+              <ScrollLink to="projects" spy={true} smooth={true} offset={-68}>
+                <Typography
+                  sx={{
+                    display: "inline",
+                    fontWeight: 1000,
+                    cursor: "pointer",
+                  }}
+                  color="primary"
+                >
+                  projects
+                </Typography>
+              </ScrollLink>{" "}
+              , but for a quicker overview, check out my{" "}
               <Link
-                href="https://digimarkets.lujr.ca/"
+                href={resumeFile}
                 target="_blank"
                 sx={{ textDecoration: "none" }}
               >
-                NFT browser
-              </Link>{" "}
-              project that I will soon develop into a full NFT marketplace.
+                resume
+              </Link>
+              .
             </Typography>
             <Box mt={2} sx={{ textAlign: "center", width: "90%", mx: "auto" }}>
               <Typography variant="h6" fontWeight={1000}>
