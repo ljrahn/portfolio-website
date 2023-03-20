@@ -23,8 +23,8 @@ COPY --from=builder /usr/src/app/build .
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./nginx/prod.conf /etc/nginx/conf.d/nginx.conf
 
-COPY ./nginx/certs/lujr_ca.key/ /etc/ssl/private/key.key
-COPY ./nginx/certs/lujr_ca.crt/ /etc/ssl/certs/cert.crt
+COPY ./nginx/certs/ljrahn_ca.key/ /etc/ssl/private/key.key
+COPY ./nginx/certs/ljrahn_ca.crt/ /etc/ssl/certs/cert.crt
 
 EXPOSE 80
 EXPOSE 443
