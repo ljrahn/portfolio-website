@@ -1,4 +1,4 @@
-import { Box, Grid, ListItem, Typography } from "@mui/material";
+import { Box, Grid, ListItem, Typography, Link } from "@mui/material";
 import React from "react";
 import MoveFade from "../../Animation/MoveFade";
 import Header from "../Header/Header";
@@ -34,8 +34,22 @@ const projects = [
   {
     src: "/img/projects/arber-cover.png",
     name: "Arber",
-    description:
-      "A DAO that facilitates trustless donations, and holds fundraisers accountable to their mission statement by integrating Kleros for arbitrating disputes between fundraisers and donors. Note that this project is currently in progress.",
+    description: (
+      <p>
+        A DAO that facilitates trustless donations, and holds fundraisers
+        accountable to their mission statement by integrating Kleros for
+        arbitrating disputes between fundraisers and donors. Note that this
+        project is currently in progress. Check out the{" "}
+        <Link
+          href="https://arber.gitbook.io/docs/white-paper/white-paper"
+          target="_blank"
+          sx={{ textDecoration: "none" }}
+        >
+          whitepaper
+        </Link>
+        !
+      </p>
+    ),
     skills: [
       "Solidity",
       "React",

@@ -87,7 +87,7 @@ const experienceItems = [
       },
       {
         children:
-          "Worked independently on troubleshooting telecommunications issues when reapiring internet, as well as assisted coworkers in the field upon request.",
+          "Worked independently on troubleshooting telecommunications issues when repairing internet, as well as assisted coworkers in the field upon request.",
       },
       {
         children:

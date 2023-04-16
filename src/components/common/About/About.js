@@ -119,7 +119,6 @@ const About = ({ headerIndex }) => {
               development experience in the latter two roles.
             </Typography>
             <Typography fontWeight={1000} mt={2}>
-              Although I do not have the same background as a Software Engineer,
               I have taken an interest in my specialization of systems/control
               engineering, which among other things, includes design of logic
               gate circuits, and PIC programming. Additionally, I have worked on
