@@ -9,6 +9,8 @@ RUN npm install
 
 COPY . .
 
+ENV NODE_OPTIONS="--max-old-space-size=768"
+
 RUN npm run build
 
 EXPOSE 3000
