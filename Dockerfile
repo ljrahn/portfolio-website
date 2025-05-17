@@ -1,46 +1,16 @@
-# FROM node:14 AS builder
-
-# # create & set working directory
-# RUN mkdir -p /usr/src/app
-# WORKDIR /usr/src/app
-
-# # Copy package.json and install dependencies
-# COPY ./package.json .
-# RUN npm install
-
-# # Copy all other files
-# COPY . .
-
-# # npm run build
-# RUN npm run build
-
-# FROM nginx
-# WORKDIR /usr/share/nginx/html
-
-# RUN rm -rf ./*
-# COPY --from=builder /usr/src/app/build .
-
-# RUN rm /etc/nginx/conf.d/default.conf
-# COPY ./nginx/prod.conf /etc/nginx/conf.d/nginx.conf
-
-# COPY ./nginx/certs/ljrahn_ca.key/ /etc/ssl/private/key.key
-# COPY ./nginx/certs/ljrahn_ca.crt/ /etc/ssl/certs/cert.crt
-
-# EXPOSE 80
-# EXPOSE 443
-
-# ENTRYPOINT ["nginx", "-g", "daemon off;"]
-
 FROM node:20
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY package.json .
+COPY package-lock.json .
 
 RUN npm install
+
+COPY . .
 
 RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:prod"]
