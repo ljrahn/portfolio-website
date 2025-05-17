@@ -2,11 +2,11 @@ svg .svg-elem-1 {
   stroke-dashoffset: 12775.80859375px;
   stroke-dasharray: 12775.80859375px;
   fill: transparent;
-  -webkit-transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715)
+  -webkit-transition: stroke-dashoffset 1.5s cubic-bezier(0.47, 0, 0.745, 0.715)
       0s,
-    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
-  transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
-    fill 2s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+    fill 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.75s;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
+    fill 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.75s;
 }
 
 svg.active .svg-elem-1 {

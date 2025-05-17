@@ -51,10 +51,9 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  } = useForm({ resolver: yupResolver(schema) });
 
   const setEmailStatePromise = (value) => {
     return new Promise((resolve) => {
@@ -78,6 +77,7 @@ const ContactForm = () => {
         (result) => {
           setEmailStatePromise(true);
           setIsLoading(false);
+          reset();
         },
         (error) => {
           console.error(
@@ -91,7 +91,7 @@ const ContactForm = () => {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Typography my={3} variant="h5" textAlign="center">
+      <Typography my={3} variant="h5" fontWeight="bold" textAlign="center">
         Send Me a Message
       </Typography>
       <Fade

@@ -156,6 +156,7 @@ const Footer = () => {
                   sx={{
                     marginRight: "12px",
                     color: "white",
+                    transition: "color 0.15s ease",
                     "&:hover": { color: "#0077b7" },
                   }}
                   fontSize="large"
@@ -170,6 +171,7 @@ const Footer = () => {
                   sx={{
                     marginLeft: "12px",
                     color: "white",
+                    transition: "color 0.15s ease",
                     "&:hover": { color: "grey.700" },
                   }}
                   fontSize="large"

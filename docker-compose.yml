@@ -4,6 +4,7 @@ services:
   portfolio:
     build:
       context: .
-      dockerfile: Dockerfile.staging
+      dockerfile: Dockerfile
     ports:
       - "80:80"
+      - "443:443"

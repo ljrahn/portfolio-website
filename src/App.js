@@ -14,33 +14,27 @@ const App = () => {
   const [timerBoolean, setTimerBoolean] = useState(false);
 
   useEffect(() => {
-    window.process = {
-      ...window.process,
-    };
-  }, []);
-
-  useEffect(() => {
     setTimeout(() => {
       setTimerBoolean(true);
-    }, 4500);
+    }, 3200);
   }, []);
 
   useEffect(() => {
-    emailjs.init(`${emailPublicKey}`);
+    emailjs.init(emailPublicKey);
   }, []);
 
   return (
-    <>
+    <ColorModeContextProvider>
+      <CssBaseline />
       {!timerBoolean ? (
         <LucasLogoIconAnimated />
       ) : (
-        <ColorModeContextProvider>
-          <CssBaseline />
+        <>
           <Navbar />
           <Home />
-        </ColorModeContextProvider>
+        </>
       )}
-    </>
+    </ColorModeContextProvider>
   );
 };
 

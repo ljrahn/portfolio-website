@@ -18,11 +18,12 @@ const LucasLogoIconAnimated = (props, { width, height }) => {
     },
     config: {
       mass: 10,
-      tension: 80,
-      friction: 80,
+      tension: 40,
+      friction: 40,
       easing: easings.easeInOutCirc,
     },
-    delay: 2500,
+
+    delay: 1500,
   });
 
   return (

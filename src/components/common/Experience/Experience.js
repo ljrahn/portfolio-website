@@ -18,6 +18,38 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const experienceItems = [
   {
+    role: "Founder & CTO/Developer",
+    company: "Lendus",
+    location: "London, ON",
+    date: "August 2023 - Present",
+    descriptionPoints: [
+      {
+        children:
+          "Led the complete product lifecycle of Lendus, an online marketplace for commercial, industrial, instrumentation, and event/entertainment equipment rentals - product design, app development, testing, CI/CD, documentation.",
+      },
+      {
+        children:
+          "Levereged Typescript across the full stack. Engineered the backend as an event driven, DDD modular monolith (Nodejs/Express, MongoDB as a primary database, Redis for server side caching, RabbitMQ for async messaging and enabling event driven flows) ensuring scalability and facilitating agile, independent module development.",
+      },
+      {
+        children:
+          "Developed all of the platforms modules including account management, marketplace management, inventory systems, order processing, payment processing, chat, notifications, real time messaging (WebSockets), analytics, search.",
+      },
+      {
+        children:
+          "Frontend implemented using Nextjs, Tanstack Query for async state management, and Mantine UI.",
+      },
+      {
+        children:
+          "Implemented unit tests and integration tests using Vitest framework. The dependency injection container (tsyringe) made mocking, and interchanging infrastructure concerns simple.",
+      },
+      {
+        children:
+          "Used Docker and Coolify for CI/CD and infrastructure management, and integrated essential services including Stripe Connect (payment processing/identity verification), Typesense (self hosted search engine), RabbitMQ (self hosted message broker), SendGrid (email), Sentry (monitoring), PostHog (analytics), and Uploadthing (S3 wrapper).",
+      },
+    ],
+  },
+  {
     role: "Software Developer",
     company: "CNTautomation",
     location: "Kitchener, ON",
@@ -72,29 +104,6 @@ const experienceItems = [
       {
         children:
           "Created bug reports using JIRA. Was in frequent communication with all development teams to resolve bugs promptly.",
-      },
-    ],
-  },
-  {
-    role: "Technician",
-    company: "Bell Technical Solutions",
-    location: "Ottawa, ON",
-    date: "May - September 2019, May - September 2020",
-    descriptionPoints: [
-      {
-        children:
-          "In charge of working on Copper and Fibre Optic communication infrastructure, repairing and installing residential internet, home phones, and FibeTV.",
-      },
-      {
-        children:
-          "Worked independently on troubleshooting telecommunications issues when repairing internet, as well as assisted coworkers in the field upon request.",
-      },
-      {
-        children:
-          "Developed communications skills by interacting with many customers, managers, and co-workers on a daily basis.",
-      },
-      {
-        children: "Recognized and rewarded for having a low rework percentage",
       },
     ],
   },
@@ -182,7 +191,6 @@ const Item = ({ item }) => {
           </Collapse>
         </Box>
       ) : (
-        // </IconButton>
         <Typography>{item.children}</Typography>
       )}
     </Box>

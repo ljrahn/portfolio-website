@@ -36,7 +36,7 @@ const ContactDetails = () => {
           backgroundImage: `url(/img/ContactImg2.jpeg)`,
         }}
       />
-      <Typography mb={10} variant="h5" color="secondary">
+      <Typography mb={10} variant="h5" fontWeight="bold" color="secondary">
         Contact Information
       </Typography>
 
@@ -109,6 +109,7 @@ const ContactDetails = () => {
               sx={{
                 marginRight: "12px",
                 color: "white",
+                transition: "color 0.15s ease",
                 "&:hover": { color: "#0077b7" },
               }}
               fontSize="large"
@@ -123,7 +124,8 @@ const ContactDetails = () => {
               sx={{
                 marginLeft: "12px",
                 color: "white",
-                "&:hover": { color: "grey.500" },
+                transition: "color 0.15s ease",
+                "&:hover": { color: "grey.600" },
               }}
               fontSize="large"
             />

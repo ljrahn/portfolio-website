@@ -7,14 +7,6 @@ import ProjectsItemSmall from "./ProjectsItemSmall";
 
 const projects = [
   {
-    src: "/img/projects/event-qr-cover.png",
-    name: "EventQR",
-    description:
-      "A QR code scanning application for uOttaHack 2023 which tracked food consumption, and raffle tickets for 500 hackers.",
-    skills: ["React Native", "Firebase Firestore", "Python"],
-    code: "https://github.com/ljrahn/event-qr",
-  },
-  {
     src: "/img/projects/apollo-cover.png",
     name: "Apollo Rehabilitation Glove",
     description:
@@ -23,7 +15,7 @@ const projects = [
       "Arduino",
       "NodeJS",
       "ExpressJS",
-      "Mongoose/MongoDB",
+      "MongoDB",
       "Python",
       "Websockets",
       "ThreeJS",
@@ -32,14 +24,22 @@ const projects = [
     demo: "https://www.youtube.com/watch?v=PwgL4q7kh08&t=2s&ab_channel=ljrahn",
   },
   {
+    src: "/img/projects/event-qr-cover.png",
+    name: "EventQR",
+    description:
+      "A QR code scanning application for uOttaHack 2023 which tracked food consumption, and raffle tickets for 500 hackers.",
+    skills: ["React Native", "Firebase Firestore", "Python"],
+    code: "https://github.com/ljrahn/event-qr",
+  },
+
+  {
     src: "/img/projects/arber-cover.png",
     name: "Arber",
     description: (
       <p>
         A DAO that facilitates trustless donations, and holds fundraisers
         accountable to their mission statement by integrating Kleros for
-        arbitrating disputes between fundraisers and donors. Note that this
-        project is currently in progress. Check out the{" "}
+        arbitrating disputes between fundraisers and donors. Check out the{" "}
         <Link
           href="https://arber.gitbook.io/docs/white-paper/white-paper"
           target="_blank"
@@ -61,22 +61,13 @@ const projects = [
     ],
     code: "https://github.com/arber-dao",
   },
-  {
-    src: "/img/projects/digimarkets-cover.png",
-    name: "Digimarkets",
-    description:
-      "An application that allows users browse NFT contracts and their tokens. After connecting a metamask wallet, you have full access to view your NFT's, your NFT transaction history, and any NFT contract, for multiple EVM compatible chains.",
-    skills: ["Flask", "NextJS", "SWR", "Metamask", "TailwindCSS"],
-    demo: "https://digimarkets.ljrahn.ca",
-    code: "https://github.com/ljrahn/digi-markets",
-  },
 ];
 
 const ProjectsBar = ({ headerIndex }) => {
   return (
     <>
       <div id="projects" />
-      <Header index={headerIndex} title="Projects" />
+      <Header index={headerIndex} title="Relevant Projects" />
 
       {projects.map((project, index) => (
         <Box key={index}>

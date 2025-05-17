@@ -11,10 +11,13 @@ const resumeFile = process.env.REACT_APP_RESUME_LOCATION;
 
 const items = [
   {
-    src: "/img/about/beach.jpeg",
+    src: "/img/about/montreal.jpeg",
   },
   {
-    src: "/img/about/montreal.jpeg",
+    src: "/img/about/cyprus-sarina.jpg",
+  },
+  {
+    src: "/img/about/mexico-stand.png",
   },
   {
     src: "/img/about/urubici-mountain.jpg",
@@ -81,50 +84,20 @@ const About = ({ headerIndex }) => {
         >
           <Box sx={{ width: { xs: "100%", md: "50%" }, flex: "none" }}>
             <Typography fontWeight={1000}>
-              Hello, my name is Lucas Rahn and I am a 2023 BASc Electrical
-              Engineering graduate from the University of Ottawa. Since early
-              2021, I have been building and designing software solutions for
-              people and companies.
+              My journey into software development has been driven by a passion
+              for building impactful solutions from the ground up. This
+              culminated in founding Lendus, where I navigated the entire
+              product lifecycle. From initial concept and architectural design
+              to development, deployment, test, and ongoing iteration. Leading
+              this venture has honed my ability to not only engineer complex
+              systems, like our event-driven rental marketplace, but also to
+              understand the importance of balancing my desire to create the
+              perfect software solution, the requirement to deliver a product
+              that fits in the market, and the need to be able to create a
+              scalable product that can be iterated upon.
             </Typography>
             <Typography fontWeight={1000} mt={2}>
-              I have worked at{" "}
-              <Link
-                href="https://www.bellsolutionstech.ca/"
-                target="_blank"
-                sx={{ textDecoration: "none" }}
-              >
-                Bell
-              </Link>{" "}
-              as a technician working on fibre and copper telecommunications
-              infrastructure,{" "}
-              <Link
-                href="https://netexperience.com/"
-                target="_blank"
-                sx={{ textDecoration: "none" }}
-              >
-                Netexperience
-              </Link>
-              , a company innovating and laying the ground work for
-              disaggregated open WiFi, and{" "}
-              <Link
-                href="https://cntautomation.com/"
-                target="_blank"
-                sx={{ textDecoration: "none" }}
-              >
-                CNTautomation
-              </Link>
-              , a company that redistributes specialty electrical equipment. In
-              all of these roles, I have gained valuable experience in the world
-              of telecommunications and networking, as well as software
-              development experience in the latter two roles.
-            </Typography>
-            <Typography fontWeight={1000} mt={2}>
-              I have taken an interest in my specialization of systems/control
-              engineering, which among other things, includes design of logic
-              gate circuits, and PIC programming. Additionally, I have worked on
-              numerous web development and blockchain projects that involve a
-              range of technologies. Below you will find a more detailed list of
-              my{" "}
+              Prior to Lendus, my{" "}
               <ScrollLink to="experience" spy={true} smooth={true} offset={-68}>
                 <Typography
                   sx={{
@@ -137,20 +110,20 @@ const About = ({ headerIndex }) => {
                   work experience
                 </Typography>
               </ScrollLink>{" "}
-              and{" "}
-              <ScrollLink to="projects" spy={true} smooth={true} offset={-68}>
-                <Typography
-                  sx={{
-                    display: "inline",
-                    fontWeight: 1000,
-                    cursor: "pointer",
-                  }}
-                  color="primary"
-                >
-                  projects
-                </Typography>
-              </ScrollLink>{" "}
-              , but for a quicker overview, check out my{" "}
+              included contributing to software reliability at NetExperience by
+              developing automated regression tests for their Open WiFi
+              compatible WLAN services. Subsequently, I focused on enhancing
+              operational efficiencies at CNTautomation Inc. by developing
+              targeted internal software tools.
+            </Typography>
+            <Typography fontWeight={1000} mt={2}>
+              These experiences have solidified my belief in creating software
+              that is functional, scalable, maintainable, and truly addresses
+              user needs. While my formal education is in Electrical
+              Engineering, my professional focus and passion has been dedicated
+              to mastering the art and science of software creation. For a
+              deeper dive into the specific technologies and projects I've
+              engaged with, please review my{" "}
               <Link
                 href={resumeFile}
                 target="_blank"
@@ -160,7 +133,8 @@ const About = ({ headerIndex }) => {
               </Link>
               .
             </Typography>
-            <Box mt={2} sx={{ textAlign: "center", width: "90%", mx: "auto" }}>
+
+            {/* <Box mt={2} sx={{ textAlign: "center", width: "90%", mx: "auto" }}>
               <Typography variant="h6" fontWeight={1000}>
                 Languages and Tools I Have Recently Worked With
               </Typography>
@@ -168,7 +142,7 @@ const About = ({ headerIndex }) => {
                 (Mouse Over)
               </Typography>
               <SkillsBar />
-            </Box>
+            </Box> */}
           </Box>
           <Box sx={{ width: "100%" }}>
             <Carousel

@@ -8,13 +8,15 @@ export const ColorModeContext = createContext({
 });
 
 /**
- * Context provider to provide app level state for the theme
+ * context provider to provide app level state for the theme
  */
 export const ColorModeContextProvider = ({ children }) => {
-  // Set initial color state
-  const initialState = localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
-    : "light";
+  // set initial color state
+  const savedTheme = localStorage.getItem("theme");
+  const systemPrefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialState = savedTheme || (systemPrefersDark ? "dark" : "light");
 
   const [mode, setMode] = useState(initialState);
 
